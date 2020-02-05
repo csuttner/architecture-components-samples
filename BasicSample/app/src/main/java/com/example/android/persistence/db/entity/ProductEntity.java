@@ -28,6 +28,7 @@ public class ProductEntity implements Product {
     private String name;
     private String description;
     private int price;
+    private boolean outOfStock;
 
     @Override
     public int getId() {
@@ -65,6 +66,15 @@ public class ProductEntity implements Product {
         this.price = price;
     }
 
+    @Override
+    public boolean getOutOfStock() {
+        return outOfStock;
+    }
+
+    public void setOutOfStock(boolean outOfStock) {
+        this.outOfStock = outOfStock;
+    }
+
     public ProductEntity() {
     }
 
@@ -74,6 +84,7 @@ public class ProductEntity implements Product {
         this.name = name;
         this.description = description;
         this.price = price;
+        this.outOfStock = outOfStock;
     }
 
     public ProductEntity(Product product) {
@@ -81,5 +92,6 @@ public class ProductEntity implements Product {
         this.name = product.getName();
         this.description = product.getDescription();
         this.price = product.getPrice();
+        this.outOfStock = product.getOutOfStock();
     }
 }
