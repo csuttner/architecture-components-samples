@@ -79,7 +79,7 @@ public class ProductEntity implements Product {
     }
 
     @Ignore
-    public ProductEntity(int id, String name, String description, int price) {
+    public ProductEntity(int id, String name, String description, int price, boolean outOfStock) {
         this.id = id;
         this.name = name;
         this.description = description;
